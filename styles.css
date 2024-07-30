@@ -11,12 +11,48 @@ body {
     margin: 0;
 }
 
-.container {
+.main-container {
+    display: flex;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 800px;
+    margin: 0 20px;
+}
+
+.about-me {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 300px;
+    margin-right: 20px;
+}
+
+.about-me h2 {
+    margin-top: 0;
+}
+
+.about-me p {
+    margin-bottom: 10px;
+}
+
+.about-me a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.about-me a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 400px;
     text-align: center;
 }
 
