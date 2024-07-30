@@ -49,11 +49,7 @@ function calculateAggregate() {
     const interviewWeighted = interviewMarks; // Directly taken as 10% weight
     const fscWeighted = (fscMarks / 1200) * 50;
 
-    // Update the HTML with intermediate values
-    document.getElementById('test-weighted').innerText = `Test Weighted Score: ${testWeighted.toFixed(2)}%`;
-    document.getElementById('interview-weighted').innerText = `Interview Weighted Score: ${interviewWeighted.toFixed(2)}%`;
-    document.getElementById('fsc-weighted').innerText = `FSc Weighted Score: ${fscWeighted.toFixed(2)}%`;
-
+    
     // Calculate total aggregate
     const aggregate = testWeighted + interviewWeighted + fscWeighted;
 
