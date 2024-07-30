@@ -5,15 +5,18 @@ function calculateAggregate() {
     const fscMarks = parseFloat(document.getElementById('fsc-marks').value);
 
     // Validate inputs
-    if (isNaN(testMarks) || isNaN(interviewMarks) || isNaN(fscMarks)) {
-        alert('Please enter valid numbers for all fields.');
+    if (isNaN(testMarks) || isNaN(interviewMarks) || isNaN(fscMarks) ||
+        testMarks < 0 || testMarks > 100 ||
+        interviewMarks < 0 || interviewMarks > 10 ||
+        fscMarks < 0 || fscMarks > 1200) {
+        alert('Please enter valid numbers within the specified range for all fields.');
         return;
     }
 
     // Calculate weighted scores
     const testWeighted = (testMarks / 100) * 40;
-    const interviewWeighted = (interviewMarks / 10) * 40;
-    const fscWeighted = (fscMarks / 1100) * 50;
+    const interviewWeighted = interviewMarks;
+    const fscWeighted = (fscMarks / 1200) * 50;
 
     // Calculate total aggregate
     const aggregate = testWeighted + interviewWeighted + fscWeighted;
