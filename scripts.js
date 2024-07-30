@@ -4,6 +4,10 @@ function calculateAggregate() {
     const interviewMarks = parseFloat(document.getElementById('interview-marks').value);
     const fscMarks = parseFloat(document.getElementById('fsc-marks').value);
 
+    console.log('Test Marks:', testMarks);
+    console.log('Interview Marks:', interviewMarks);
+    console.log('FSc Marks:', fscMarks);
+
     // Validate inputs
     if (isNaN(testMarks) || isNaN(interviewMarks) || isNaN(fscMarks)) {
         alert('Please enter valid numbers for all fields.');
