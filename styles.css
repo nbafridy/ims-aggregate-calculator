@@ -17,17 +17,30 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 800px;
+    max-width: 800px;
     margin: 0 20px;
+    flex-direction: row; /* Default to row for larger screens */
 }
 
-.about-me {
+.about-me, .container {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 100%;
     margin-right: 20px;
+    box-sizing: border-box;
+}
+
+.about-me {
+    margin-right: 20px;
+    flex: 1; /* Allow the about-me section to grow */
+}
+
+.container {
+    flex: 1; /* Allow the form container to grow */
+    max-width: 400px;
+    text-align: center;
 }
 
 .about-me h2 {
@@ -45,15 +58,6 @@ body {
 
 .about-me a:hover {
     text-decoration: underline;
-}
-
-.container {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    text-align: center;
 }
 
 h1 {
@@ -97,4 +101,21 @@ button:hover {
     margin-top: 20px;
     font-size: 18px;
     color: #333;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+        padding: 10px;
+    }
+
+    .about-me {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        max-width: 100%;
+    }
 }
