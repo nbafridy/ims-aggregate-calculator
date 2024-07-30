@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    background: url('background.jpg') no-repeat center center fixed;
+    background: url('background2.jpg') no-repeat center center fixed;
     background-size: cover; /* Ensure the image covers the entire viewport */
     display: flex;
     justify-content: center;
