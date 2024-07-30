@@ -15,7 +15,7 @@ function calculateAggregate() {
 
     // Calculate weighted scores
     const testWeighted = (testMarks / 100) * 40;
-    const interviewWeighted = interviewMarks;
+    const interviewWeighted = interviewMarks; // Directly taken as 10% weight
     const fscWeighted = (fscMarks / 1100) * 50;
 
     // Calculate total aggregate
