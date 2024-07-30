@@ -2,14 +2,10 @@ function calculateAggregate() {
     // Get the input values
     const testMarks = parseFloat(document.getElementById('test-marks').value);
     const interviewMarks = parseFloat(document.getElementById('interview-marks').value);
-    const fscMarks = parseFloat(document.getElementById('fsc-marks').value);
-
-    console.log('Test Marks:', testMarks);
-    console.log('Interview Marks:', interviewMarks);
-    console.log('FSc Marks:', fscMarks);
+    const fscPercentage = parseFloat(document.getElementById('fsc-percentage').value);
 
     // Validate inputs
-    if (isNaN(testMarks) || isNaN(interviewMarks) || isNaN(fscMarks)) {
+    if (isNaN(testMarks) || isNaN(interviewMarks) || isNaN(fscPercentage)) {
         alert('Please enter valid numbers for all fields.');
         return;
     }
@@ -17,7 +13,7 @@ function calculateAggregate() {
     // Calculate weighted scores
     const testWeighted = (testMarks / 100) * 40;
     const interviewWeighted = (interviewMarks / 10) * 10;
-    const fscWeighted = (fscMarks / 100) * 50;
+    const fscWeighted = (fscPercentage / 100) * 50;
 
     // Calculate total aggregate
     const aggregate = testWeighted + interviewWeighted + fscWeighted;
