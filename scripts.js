@@ -8,7 +8,7 @@ function calculateAggregate() {
     if (isNaN(testMarks) || isNaN(interviewMarks) || isNaN(fscMarks) ||
         testMarks < 0 || testMarks > 100 ||
         interviewMarks < 0 || interviewMarks > 10 ||
-        fscMarks < 0 || fscMarks > 1200) {
+        fscMarks < 0 || fscMarks > 600) {
         alert('Please enter valid numbers within the specified range for all fields.');
         return;
     }
@@ -16,7 +16,7 @@ function calculateAggregate() {
     // Calculate weighted scores
     const testWeighted = (testMarks / 100) * 40;
     const interviewWeighted = interviewMarks; // Directly taken as 10% weight
-    const fscWeighted = (fscMarks / 1100) * 50;
+    const fscWeighted = (fscMarks / 600) * 50;
 
     // Calculate total aggregate
     const aggregate = testWeighted + interviewWeighted + fscWeighted;
